@@ -1,0 +1,459 @@
+/* =========================================================
+   NOSSOS OBJETIVOS
+   ========================================================= */
+
+/* Hero */
+.objectives-hero {
+    padding-block: 64px 80px;
+}
+
+.objectives-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.objectives-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.objectives-hero__image {
+    min-width: 0;
+}
+
+.image-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.image-frame--hero {
+    height: 400px;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Challenge */
+.challenge {
+    padding-block: 64px 80px;
+}
+
+.challenge__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.challenge__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.challenge__visual {
+    position: relative;
+    height: 300px;
+}
+
+.challenge__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+}
+
+/* Purpose */
+.purpose {
+    background: var(--color-surface);
+    text-align: center;
+}
+
+.purpose__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.purpose .display-title {
+    max-width: 900px;
+}
+
+.purpose .section-lead {
+    margin-inline: auto;
+}
+
+/* Solutions */
+.solutions {
+    background: var(--color-background);
+}
+
+.solutions .section-heading {
+    margin-bottom: 48px;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.solution-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 250px;
+    padding: 32px;
+    border: 1px solid var(--color-surface-variant);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.solution-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.solution-card h3 {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.solution-card p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* Learning path */
+.learning-path {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.learning-path::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.1);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.learning-path__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.learning-path__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.learning-path__heading > div {
+    max-width: 650px;
+}
+
+.learning-path .section-title {
+    margin-bottom: 16px;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.learning-item {
+    padding-top: 16px;
+    border-top: 1px solid #4e5e82;
+}
+
+.learning-item h3 {
+    margin-bottom: 8px;
+    color: var(--color-accent-fixed);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.learning-item p {
+    color: #d7dadf;
+    line-height: 1.6;
+}
+
+/* Journey */
+.journey__heading {
+    max-width: 720px;
+    margin-inline: auto;
+    margin-bottom: 64px;
+}
+
+.journey__heading .section-text {
+    margin-top: 16px;
+}
+
+.journey__timeline {
+    position: relative;
+}
+
+.journey__progress {
+    position: absolute;
+    top: 32px;
+    right: 10%;
+    left: 10%;
+    height: 4px;
+    background: var(--color-surface-variant);
+    transform: translateY(-50%);
+}
+
+.journey__progress::before {
+    content: "";
+    display: block;
+    width: 33.333%;
+    height: 100%;
+    background: var(--color-accent);
+}
+
+.journey-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.journey-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.journey-step__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--color-surface-variant);
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    box-shadow: var(--shadow-sm);
+}
+
+.journey-step__icon--active {
+    border-color: var(--color-primary-container);
+    background: var(--color-primary-fixed);
+    color: var(--color-primary);
+}
+
+.journey-step h3 {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.journey-step p {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.journey-step--future h3,
+.journey-step--future p {
+    opacity: 0.6;
+}
+
+/* Tracker preview */
+.tracker-preview__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.tracker-preview__visual {
+    height: 350px;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+}
+
+.tracker-preview__visual img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+.tracker-preview__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.feature-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-accent-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.feature-label .material-symbols-outlined {
+    font-size: 22px;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 4px;
+    color: var(--color-text-muted);
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.feature-list .material-symbols-outlined {
+    flex-shrink: 0;
+    color: var(--color-accent-dark);
+    font-size: 18px;
+}
+
+/* Final CTA */
+.final-cta {
+    background: var(--color-surface);
+    text-align: center;
+}
+
+.final-cta__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.final-cta__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .objectives-hero__grid,
+    .challenge__grid,
+    .tracker-preview__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objectives-hero__content {
+        order: 1;
+    }
+
+    .objectives-hero__image {
+        order: 2;
+    }
+
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .journey__progress {
+        display: none;
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 48px;
+    }
+
+    .learning-path__heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .objectives-hero {
+        padding-block: 48px 56px;
+    }
+
+    .image-frame--hero {
+        height: 300px;
+    }
+
+    .solutions-grid,
+    .learning-grid,
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-card {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .learning-path__heading {
+        margin-bottom: 36px;
+    }
+
+    .journey__heading {
+        margin-bottom: 48px;
+    }
+
+    .tracker-preview__visual {
+        height: 280px;
+    }
+
+    .final-cta__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .final-cta__actions .button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "file_count": 30,
+  "php_pages": 19,
+  "material_pages": 13,
+  "shared_components": [
+    "components/footer.php",
+    "components/header.php"
+  ]
+}
